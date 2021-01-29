@@ -51,10 +51,14 @@ if (MSVC)
 	# etc. as appropriate
 endif()
 
+
 # Locate GTest
 if(NOT MSVC)
-        #find_package(GTest REQUIRED)
-        find_package(GTest)
+        set (GTEST_ROOT /home/dikey/am335x_UB12-32bit/root/Desktop/__librarys/3rdparty/googletest_UB16/googlemock/gtest/)
+        include_directories("/home/dikey/am335x_UB12-32bit/root/Desktop/__librarys/3rdparty/googletest_UB16/googletest/include")
+
+        find_package(GTest REQUIRED)
+        #find_package(GTest)
 	include_directories(${GTEST_INCLUDE_DIRS})
 endif()
 
