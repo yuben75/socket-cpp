@@ -63,7 +63,7 @@ void ASecureSocket::SetUpCtxClient(SSLSocket& Socket)
       default:
       case OpenSSLProtocol::TLS:
          // Standard Protocol as of 11/2018, OpenSSL will choose highest possible TLS standard between peers
-         Socket.m_pMTHDSSL = const_cast<SSL_METHOD*>(TLS_client_method());
+         //Socket.m_pMTHDSSL = const_cast<SSL_METHOD*>(TLS_client_method());
          break;
 
       case OpenSSLProtocol::SSL_V23:
@@ -96,7 +96,7 @@ void ASecureSocket::SetUpCtxServer(SSLSocket& Socket)
       default:
       case OpenSSLProtocol::TLS:
          // Standard Protocol as of 11/2018, OpenSSL will choose highest possible TLS standard between peers
-         Socket.m_pMTHDSSL = const_cast<SSL_METHOD*>(TLS_server_method());
+         //Socket.m_pMTHDSSL = const_cast<SSL_METHOD*>(TLS_server_method());
          break;
 
       #ifndef LINUX

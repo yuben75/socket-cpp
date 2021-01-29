@@ -53,7 +53,8 @@ endif()
 
 # Locate GTest
 if(NOT MSVC)
-	find_package(GTest REQUIRED)
+        #find_package(GTest REQUIRED)
+        find_package(GTest)
 	include_directories(${GTEST_INCLUDE_DIRS})
 endif()
 

@@ -141,7 +141,7 @@ bool CTCPSSLServer::HasPending(const SSLSocket& ClientSocket)
 {
    int pend;
 
-   pend = SSL_has_pending(ClientSocket.m_pSSL);
+   //pend = SSL_has_pending(ClientSocket.m_pSSL);
 
    return pend == 1;
 }

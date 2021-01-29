@@ -194,7 +194,7 @@ bool CTCPSSLClient::HasPending()
 {
    int pend;
 
-   pend = SSL_has_pending(m_SSLConnectSocket.m_pSSL);
+   //pend = SSL_has_pending(m_SSLConnectSocket.m_pSSL);
 
    return pend == 1;
 }
